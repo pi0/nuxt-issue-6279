@@ -6,6 +6,6 @@
     "start": "nuxt start"
   },
   "dependencies": {
-    "nuxt": "~2.7.0"
+    "nuxt": "^2.9.1"
   }
 }
