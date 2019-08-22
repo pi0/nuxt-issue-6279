@@ -1,12 +1,17 @@
+import Vue from 'vue'
+
 export const state = () => ({
   test: []
 });
 
 const nonReactiveState = state()
+const vueReactive =  {}
+Vue.set(vueReactive, 'state', state())
 
 export const mutations = {
   pushSingleData (state, value) {
     // state = nonReactiveState // TEST
+    // state = vueReactive.state // TEST
     const index = state.test.findIndex(c => c.code === value.code)
     if (index === -1) {
       state.test.push(value)
